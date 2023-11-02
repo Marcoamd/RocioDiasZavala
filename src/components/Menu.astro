@@ -1,12 +1,19 @@
-<!-- component --><!-- This is an example component -->
+---
+const isHomePage = Astro.url.pathname === "/";
+const isAboutPage = Astro.url.pathname === "/about";
+const isExperiencePage = Astro.url.pathname === "/experience";
+const isPublicationsPage = Astro.url.pathname === "/publications";
+const isRecognitionsPage = Astro.url.pathname === "/recognitions";
+const isContactPage = Astro.url.pathname === "/contact";
+---
+
 <div class="sticky bg-white px-3 sm:px-0">
   <nav class="border-gray-200">
     <div class="flex flex-wrap items-center justify-between py-5">
-      <a href="/" class="flex">
-        <span class="self-center text-2xl font-bold whitespace-nowrap"
-          >Rocío Díaz</span
-        >
-      </a>
+      <span class="self-center text-2xl font-bold whitespace-nowrap"
+        >Rocío Díaz</span
+      >
+
       <button
         data-collapse-toggle="mobile-menu"
         type="button"
@@ -39,46 +46,52 @@
       <div class="hidden lg:block w-full md:w-auto" id="mobile-menu">
         <nav id="my-menu">
           <ul
-            class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-base md:font-normal"
+            class="flex-col space-x-1 md:flex-row flex mt-4 md:mt-0 md:text-base md:font-normal"
           >
             <li>
-              <a href="#home" class="bg-neutral-700 text-white py-2 px-4"
-                >Inicio</a
+              <a
+                class:list={[{ "bg-neutral-800 text-white": isHomePage }]}
+                href="/"
+                class="py-2 px-6">Inicio</a
               >
             </li>
             <li>
               <a
-                href="#home"
-                class="hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-red-300 md:p-0"
-                >Sobre mí</a
+                class:list={[{ "bg-neutral-800 text-white": isAboutPage }]}
+                href="/about"
+                class="py-2 px-6">Acerca</a
               >
             </li>
             <li>
               <a
-                href="#home"
-                class="hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-red-300 md:p-0"
-                >Experiencia</a
+                class:list={[{ "bg-neutral-800 text-white": isExperiencePage }]}
+                href="/experience"
+                class="py-2 px-6">Experiencia</a
               >
             </li>
             <li>
               <a
-                href="#home"
-                class="hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-red-200 md:p-0"
-                >Publicaciones</a
+                class:list={[
+                  { "bg-neutral-800 text-white": isPublicationsPage },
+                ]}
+                href="/publications"
+                class="py-2 px-6">Publicaciones</a
               >
             </li>
             <li>
               <a
-                href="#home"
-                class="hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-orange-500 md:p-0"
-                >Reconocimientos</a
+                class:list={[
+                  { "bg-neutral-800 text-white": isRecognitionsPage },
+                ]}
+                href="/recognitions"
+                class="py-2 px-6">Reconocimientos</a
               >
             </li>
             <li>
               <a
-                href="#home"
-                class="hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-orange-500 md:p-0"
-                >Contacto</a
+                class:list={[{ "bg-neutral-800 text-white": isContactPage }]}
+                href="/contact"
+                class="py-2 px-6">Contacto</a
               >
             </li>
           </ul>
@@ -93,7 +106,15 @@
 ></script>
 
 <style>
-  #my-menu ul li a.active {
-    color: #f97316; /* Cambia el color del enlace activo a tu elección */
+  a {
+    box-shadow: inset 0 0 0 0 #404040;
+    transition:
+      color 0.7s ease-in-out,
+      box-shadow 0.7s ease-in-out;
+  }
+
+  a:hover {
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 #404040;
   }
 </style>
