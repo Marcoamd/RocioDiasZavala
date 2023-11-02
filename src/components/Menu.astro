@@ -7,9 +7,9 @@ const isRecognitionsPage = Astro.url.pathname === "/recognitions";
 const isContactPage = Astro.url.pathname === "/contact";
 ---
 
-<div class="sticky bg-white px-3 sm:px-0">
+<div class="sticky bg-white">
   <nav class="border-gray-200">
-    <div class="flex flex-wrap items-center justify-between py-5">
+    <div class="flex flex-wrap items-center justify-between py-4">
       <span class="self-center text-2xl font-bold whitespace-nowrap"
         >Rocío Díaz</span
       >
@@ -44,13 +44,17 @@ const isContactPage = Astro.url.pathname === "/contact";
         >
       </button>
       <div class="hidden lg:block w-full md:w-auto" id="mobile-menu">
-        <nav id="my-menu">
+        <nav id="my-menu" class="">
           <ul
             class="flex-col space-x-1 md:flex-row flex mt-4 md:mt-0 md:text-base md:font-normal"
           >
             <li>
               <a
-                class:list={[{ "bg-neutral-800 text-white": isHomePage }]}
+                class:list={[
+                  {
+                    "bg-neutral-800 text-white": isHomePage,
+                  },
+                ]}
                 href="/"
                 class="py-2 px-6">Inicio</a
               >
