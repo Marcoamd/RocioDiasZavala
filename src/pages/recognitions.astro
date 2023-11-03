@@ -1,7 +1,38 @@
 ---
+import Certificate from "../components/Certificate.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Reconocimientos">
-  <section></section>
+  <section>
+    <!-- Title -->
+    <div class="flex items-center mb-8">
+      <h1 class="text-lg font-bold tracking-widest text-gray-700">
+        RECONOCIMIENTOS
+      </h1>
+      <div class="h-0.5 w-full ml-8 bg-gray-300"></div>
+    </div>
+    <!-- /Title -->
+
+    <div class="grid-cards">
+      <Certificate
+        title="Reconocimiento"
+        description="Reconocimiento otorgado por la UNSA Resolución Vicerrectoral N° 0248- 2019-VR.AC 10 de julio 2019 Comisión Permanente de facilitadores."
+      />
+      <Certificate
+        title="Diploma"
+        description="Diploma de Felicitación otorgada por el Director de Departamento de Educación y el Decano de la Facultad de Ciencias de la Educación de fecha "
+      />
+      <Certificate title="" description="" />
+      <Certificate title="" description="" />
+      <Certificate title="" description="" />
+    </div>
+  </section>
 </Layout>
+<style>
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+</style>

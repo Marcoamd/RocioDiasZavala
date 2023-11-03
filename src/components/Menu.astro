@@ -10,7 +10,8 @@ const isContactPage = Astro.url.pathname === "/contact";
 <div class="sticky bg-white">
   <nav class="border-gray-200">
     <div class="flex flex-wrap items-center justify-between py-4">
-      <span class="self-center text-2xl font-bold whitespace-nowrap"
+      <span
+        class="self-center text-2xl font-bold whitespace-nowrap text-gray-900"
         >Rocío Díaz</span
       >
 
@@ -52,7 +53,7 @@ const isContactPage = Astro.url.pathname === "/contact";
               <a
                 class:list={[
                   {
-                    "bg-neutral-800 text-white": isHomePage,
+                    "bg-gray-700 text-white": isHomePage,
                   },
                 ]}
                 href="/"
@@ -61,39 +62,35 @@ const isContactPage = Astro.url.pathname === "/contact";
             </li>
             <li>
               <a
-                class:list={[{ "bg-neutral-800 text-white": isAboutPage }]}
+                class:list={[{ "bg-gray-700 text-white": isAboutPage }]}
                 href="/about"
                 class="py-2 px-6">Acerca</a
               >
             </li>
             <li>
               <a
-                class:list={[{ "bg-neutral-800 text-white": isExperiencePage }]}
+                class:list={[{ "bg-gray-700 text-white": isExperiencePage }]}
                 href="/experience"
                 class="py-2 px-6">Experiencia</a
               >
             </li>
             <li>
               <a
-                class:list={[
-                  { "bg-neutral-800 text-white": isPublicationsPage },
-                ]}
+                class:list={[{ "bg-gray-700 text-white": isPublicationsPage }]}
                 href="/publications"
                 class="py-2 px-6">Publicaciones</a
               >
             </li>
             <li>
               <a
-                class:list={[
-                  { "bg-neutral-800 text-white": isRecognitionsPage },
-                ]}
+                class:list={[{ "bg-gray-700 text-white": isRecognitionsPage }]}
                 href="/recognitions"
                 class="py-2 px-6">Reconocimientos</a
               >
             </li>
             <li>
               <a
-                class:list={[{ "bg-neutral-800 text-white": isContactPage }]}
+                class:list={[{ "bg-gray-700 text-white": isContactPage }]}
                 href="/contact"
                 class="py-2 px-6">Contacto</a
               >
@@ -111,7 +108,7 @@ const isContactPage = Astro.url.pathname === "/contact";
 
 <style>
   a {
-    box-shadow: inset 0 0 0 0 #404040;
+    box-shadow: inset 0 0 0 0 #fda4af;
     transition:
       color 0.7s ease-in-out,
       box-shadow 0.7s ease-in-out;
@@ -119,6 +116,6 @@ const isContactPage = Astro.url.pathname === "/contact";
 
   a:hover {
     color: #fff;
-    box-shadow: inset 200px 0 0 0 #404040;
+    box-shadow: inset 200px 0 0 0 #fda4af;
   }
 </style>

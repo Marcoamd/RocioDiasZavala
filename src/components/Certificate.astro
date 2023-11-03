@@ -1,0 +1,65 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!-- <div
+  class="card bg-gray-200 hover:bg-gray-700 py-3 px-5 border-sm border-gray-200
+  duration-1000 transition-transform hover:scale-105
+  hover:cursor-pointer"
+>
+  <div class="w-1/2 bg-gray-300 h-4 my-4 mx-auto"></div>
+  <div class="bg-gray-300 mb-3 text-sm">{description}</div>
+
+  <div class="grid grid-cols-2 mb-3">
+    <div>
+      <div class="bg-gray-300 w-full h-2 mb-3"></div>
+      <div class="bg-gray-300 w-full h-2 mb-3"></div>
+    </div>
+    <div class="text-4xl text-red-300 text-end">
+      <i class="bi bi-award"></i>
+    </div>
+  </div>
+</div> --><!-- Latest compiled and minified CSS --><!-- component -->
+<div>
+  <div
+    class="shadow-lg group container rounded-md bg-white max-w-sm flex justify-center items-center mx-auto content-div"
+  >
+    <div>
+      <div class="w-full image-cover rounded-t-md"></div>
+    </div>
+    <div class="opacity-0 group-hover:opacity-100">
+      <p class="text-white p-3">{description}</p>
+    </div>
+  </div>
+</div>
+<style>
+  .content-div {
+    background-image: url("https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .content-div:hover {
+    background-image: linear-gradient(to right, #374151, #374151),
+      url("https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80");
+  }
+
+  .image-cover {
+    height: 260px;
+  }
+  /*
+-remove the classes below if you have the 'group-hover'property added in your tailwind config file
+-also remove the class from the html template
+*/
+  .content-div:hover .fd-cl {
+    opacity: 0.25;
+  }
+  .content-div:hover .fd-sh {
+    opacity: 1;
+  }
+</style>

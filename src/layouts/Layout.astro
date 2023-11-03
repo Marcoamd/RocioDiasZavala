@@ -33,10 +33,13 @@ const { title } = Astro.props;
         <Menu />
       </header>
       <div class="leftSide"></div>
-      <main class="body bg-red-50">
+      <main class="body bg-gray-100">
         <div class="flex h-full">
-          <img src="/image/profile.jpg" alt="" class="w-1/4 hidden md:block" />
-          <div class="w-full pt-10 px-10" transition:animate="slide">
+          <img src="/image/profile.jpg" alt="" class="w-1/4 hidden xl:block" />
+          <div
+            class="w-full pt-10 px-5 md:px-10 overflow-auto"
+            transition:animate="slide"
+          >
             <slot />
           </div>
         </div>
@@ -46,6 +49,23 @@ const { title } = Astro.props;
         <Footer />
       </footer>
     </div>
+    <div class="trail hidden"></div>
+    <script>
+      document.addEventListener("mousemove", function (event) {
+        const trail = document.createElement("div");
+        trail.className = "trail";
+        document.body.appendChild(trail);
+        trail.style.left = event.pageX - 5 + "px";
+        trail.style.top = event.pageY - 5 + "px";
+        setTimeout(() => {
+          trail.remove();
+        }, 1000);
+      });
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"
+    ></script>
+
     <style is:global>
       :root {
       }
@@ -58,6 +78,7 @@ const { title } = Astro.props;
       body {
         padding: 0;
         margin: 0;
+        overflow: hidden;
       }
       .layout {
         width: 100%;
@@ -79,6 +100,7 @@ const { title } = Astro.props;
       }
       .body {
         grid-area: body;
+        overflow: auto;
         /* background-color: #f0dfdc; */
         /* background-color: #f6fbff; */
       }
@@ -101,6 +123,28 @@ const { title } = Astro.props;
             "body body body" 1fr
             "footer footer footer" 70px
             / 50px 1fr 50px;
+        }
+      }
+
+      .trail {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #fecaca;
+        pointer-events: none;
+        transform-origin: center;
+        animation: trail 0.5s ease-out;
+        opacity: 0;
+      }
+
+      @keyframes trail {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(0);
+          opacity: 0;
         }
       }
     </style>
