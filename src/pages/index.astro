@@ -5,11 +5,14 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Rocío Marivel Díaz Zavala">
   <section class="flex items-center h-full">
     <article class="px-5 sm:px-10">
-      <h1 class="text-5xl font-bold text-gray-700">
+      <h1 class="text-5xl font-bold text-neutral-800">
         Rocío Marivel Díaz Zavala
       </h1>
-      <div class="bg-gray-300 w-20 h-2 my-3"></div>
-      <span class="text-3xl text-gray-600">
+      <div class="line w-32 h-1 my-3"></div>
+      <p class="text-3xl hidden md:block text-neutral-500">
+        Licenciada en Ciencias de la Educación
+      </p>
+      <span class="text-3xl md:hidden text-neutral-500">
         Licenciada en Ciencias de la Educación
       </span>
     </article>
@@ -17,8 +20,8 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
-  span {
-    display: block;
+  p {
+    /* display: block; */
     font-family: monospace;
     white-space: nowrap;
     border-right: 4px solid;

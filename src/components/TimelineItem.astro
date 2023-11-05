@@ -11,22 +11,22 @@ const { title, date, subtitle } = Astro.props;
 <li class="rounded-lg group cursor-pointer">
   <div class="flex flex-row">
     <div class="items-center flex flex-col justify-around">
-      <div class="border-l-2 h-full border-gray-200"></div>
+      <div class="border-l-2 h-full border-purple-200"></div>
       <div
-        class="bg-gray-200 border-gray-200 p-1 border-2 rounded-full h-8 w-8 flex flex-grow justify-around"
+        class="bg-white border-purple-200 p-1 border-2 rounded-full h-8 w-8 flex flex-grow justify-around"
       >
-        <span class="text-gray-400"><i class="bi bi-briefcase"></i></span>
+        <span class="text-purple-400"><i class="bi bi-briefcase"></i></span>
       </div>
-      <div class="border-l-2 h-full border-gray-200"></div>
+      <div class="border-l-2 h-full border-purple-200"></div>
     </div>
     <div
-      class="flex flex-col group-hover:bg-red-100 ml-2 p-2 pr-6 rounded-xl
+      class="flex flex-col group-hover:bg-purple-200 ml-2 p-2 pr-6 rounded-xl
          transition duration-500"
     >
       <div>
-        <span class="ml-4 text-xs text-white bg-red-300 px-2">{date}</span>
+        <span class="ml-4 text-xs text-white bg-purple-300 px-2">{date}</span>
       </div>
-      <h3 class="ml-4 text-lg text-gray-700 font-medium">
+      <h3 class="ml-4 text-lg font-medium">
         {title}
       </h3>
       <h4 class="ml-4 text-sm text-gray-500">{subtitle}</h4>
