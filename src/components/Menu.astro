@@ -1,15 +1,13 @@
 ---
 const baseUrl = import.meta.env.BASE_URL;
-const siteUrl = import.meta.env.SITE;
-const isHomePage = Astro.url.pathname === `${siteUrl + baseUrl}/`;
-const isAboutPage = Astro.url.pathname === `${siteUrl + baseUrl}/about`;
-const isExperiencePage =
-  Astro.url.pathname === `${siteUrl + baseUrl}/experience`;
-const isPublicationsPage =
-  Astro.url.pathname === `${siteUrl + baseUrl}/publications`;
-const isRecognitionsPage =
-  Astro.url.pathname === `${siteUrl + baseUrl}/recognitions`;
-const isContactPage = Astro.url.pathname === `${siteUrl + baseUrl}/contact`;
+const site = import.meta.env.SITE;
+
+const isHomePage = Astro.url.pathname === "/";
+const isAboutPage = Astro.url.pathname === "/about";
+const isExperiencePage = Astro.url.pathname === "/experience";
+const isPublicationsPage = Astro.url.pathname === "/publications";
+const isRecognitionsPage = Astro.url.pathname === "/recognitions";
+const isContactPage = Astro.url.pathname === "/contact";
 
 title: "Rocío Marivel Díaz Zavala";
 date: "2023-11-05";
@@ -70,19 +68,19 @@ author: "Rocío Marivel Díaz Zavala";
                     "link-active": isHomePage,
                   },
                 ]}
-                href=`${baseUrl}`>Inicio</a
+                href={site + baseUrl}>Inicio</a
               >
             </li>
             <li class="flex">
               <a
                 class:list={["py-2 px-6", { "link-active": isAboutPage }]}
-                href=`${baseUrl}/about`>Acerca</a
+                href=`${site+baseUrl}/about`>Acerca</a
               >
             </li>
             <li class="flex">
               <a
                 class:list={["py-2 px-6", { "link-active": isExperiencePage }]}
-                href=`${baseUrl}/experience`>Experiencia</a
+                href=`${site+baseUrl}/experience`>Experiencia</a
               >
             </li>
             <li class="flex">
@@ -139,6 +137,16 @@ author: "Rocío Marivel Díaz Zavala";
   }
 
   .link-active {
+    color: #fff;
+    background: rgb(51, 0, 208);
+    background: linear-gradient(
+      90deg,
+      rgba(51, 0, 208, 1) 0%,
+      rgba(105, 16, 208, 1) 50%,
+      rgba(188, 12, 240, 1) 100%
+    );
+  }
+  a:active {
     color: #fff;
     background: rgb(51, 0, 208);
     background: linear-gradient(
