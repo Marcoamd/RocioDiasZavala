@@ -66,19 +66,19 @@ const baseUrl = import.meta.env.BASE_URL;
                     "link-active": isHomePage,
                   },
                 ]}
-                href="/">Inicio</a
+                href=`${baseUrl}`>Inicio</a
               >
             </li>
             <li class="flex">
               <a
                 class:list={["py-2 px-6", { "link-active": isAboutPage }]}
-                href={baseUrl + `/about`}>Acerca</a
+                href=`${baseUrl}/about`>Acerca</a
               >
             </li>
             <li class="flex">
               <a
                 class:list={["py-2 px-6", { "link-active": isExperiencePage }]}
-                href="/experience">Experiencia</a
+                href=`${baseUrl}/experience`>Experiencia</a
               >
             </li>
             <li class="flex">
@@ -87,7 +87,7 @@ const baseUrl = import.meta.env.BASE_URL;
                   "py-2 px-6",
                   { "link-active": isPublicationsPage },
                 ]}
-                href="/publications">Publicaciones</a
+                href=`${baseUrl}/publications`>Publicaciones</a
               >
             </li>
 
@@ -97,13 +97,13 @@ const baseUrl = import.meta.env.BASE_URL;
                   "py-2 px-6",
                   { "link-active": isRecognitionsPage },
                 ]}
-                href="/recognitions">Reconocimientos</a
+                href=`${baseUrl}/recognitions`>Reconocimientos</a
               >
             </li>
             <li class="flex">
               <a
                 class:list={["py-2 px-6", { "link-active": isContactPage }]}
-                href="/contact">Contacto</a
+                href=`${baseUrl}/contact`>Contacto</a
               >
             </li>
           </ul>
