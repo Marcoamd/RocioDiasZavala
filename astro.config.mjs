@@ -7,4 +7,5 @@ export default defineConfig({
   integrations: [tailwind()],
   site: "https://marcoamd.github.io",
   base: "/RocioDiasZavala",
+  output: "hybrid",
 });

@@ -2,12 +2,14 @@
 const baseUrl = import.meta.env.BASE_URL;
 const site = import.meta.env.SITE;
 
-const isHomePage = Astro.url.pathname === "/";
-const isAboutPage = Astro.url.pathname === "/about";
+const isHomePage = Astro.url.pathname === `${baseUrl}/`;
+const isAboutPage = Astro.url.pathname === `${baseUrl}/about`;
 const isExperiencePage = Astro.url.pathname === "/experience";
 const isPublicationsPage = Astro.url.pathname === "/publications";
 const isRecognitionsPage = Astro.url.pathname === "/recognitions";
 const isContactPage = Astro.url.pathname === "/contact";
+
+export const prerender = false;
 
 title: "Rocío Marivel Díaz Zavala";
 date: "2023-11-05";
@@ -68,13 +70,13 @@ author: "Rocío Marivel Díaz Zavala";
                     "link-active": isHomePage,
                   },
                 ]}
-                href={site + baseUrl}>Inicio</a
+                href={baseUrl}>Inicio</a
               >
             </li>
             <li class="flex">
               <a
                 class:list={["py-2 px-6", { "link-active": isAboutPage }]}
-                href=`${site+baseUrl}/about`>Acerca</a
+                href=`${baseUrl}/about`>Acerca</a
               >
             </li>
             <li class="flex">
@@ -137,16 +139,6 @@ author: "Rocío Marivel Díaz Zavala";
   }
 
   .link-active {
-    color: #fff;
-    background: rgb(51, 0, 208);
-    background: linear-gradient(
-      90deg,
-      rgba(51, 0, 208, 1) 0%,
-      rgba(105, 16, 208, 1) 50%,
-      rgba(188, 12, 240, 1) 100%
-    );
-  }
-  a:active {
     color: #fff;
     background: rgb(51, 0, 208);
     background: linear-gradient(
