@@ -1,12 +1,16 @@
 ---
 const baseUrl = import.meta.env.BASE_URL;
-const isHomePage = Astro.url.pathname === `${baseUrl}/`;
-const isAboutPage = Astro.url.pathname === `${baseUrl}/about`;
-const isExperiencePage = Astro.url.pathname === `${baseUrl}/experience`;
-const isPublicationsPage = Astro.url.pathname === `${baseUrl}/publications`;
-const isRecognitionsPage = Astro.url.pathname === `${baseUrl}/recognitions`;
-const isContactPage = Astro.url.pathname === `${baseUrl}/contact`;
-console.log(Astro.url.pathname);
+const siteUrl = import.meta.env.SITE;
+const isHomePage = Astro.url.pathname === `${siteUrl + baseUrl}/`;
+const isAboutPage = Astro.url.pathname === `${siteUrl + baseUrl}/about`;
+const isExperiencePage =
+  Astro.url.pathname === `${siteUrl + baseUrl}/experience`;
+const isPublicationsPage =
+  Astro.url.pathname === `${siteUrl + baseUrl}/publications`;
+const isRecognitionsPage =
+  Astro.url.pathname === `${siteUrl + baseUrl}/recognitions`;
+const isContactPage = Astro.url.pathname === `${siteUrl + baseUrl}/contact`;
+
 title: "Rocío Marivel Díaz Zavala";
 date: "2023-11-05";
 author: "Rocío Marivel Díaz Zavala";
