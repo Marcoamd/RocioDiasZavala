@@ -1,6 +1,4 @@
 ---
-export const prerender = false;
-
 const baseUrl = import.meta.env.BASE_URL;
 const site = import.meta.env.SITE;
 
@@ -11,9 +9,10 @@ const isPublicationsPage = Astro.url.pathname === "/publications";
 const isRecognitionsPage = Astro.url.pathname === "/recognitions";
 const isContactPage = Astro.url.pathname === "/contact";
 
-title: "Rocío Marivel Díaz Zavala";
-date: "2023-11-05";
-author: "Rocío Marivel Díaz Zavala";
+// title: "Rocío Marivel Díaz Zavala";
+// date: "2023-11-05";
+// author: "Rocío Marivel Díaz Zavala";
+export const prerender = false;
 ---
 
 <header class="sticky z-20 mt-3">
