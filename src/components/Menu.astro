@@ -4,15 +4,15 @@ const site = import.meta.env.SITE;
 
 const isHomePage = Astro.url.pathname === `${baseUrl}/`;
 const isAboutPage = Astro.url.pathname === `${baseUrl}/about`;
-const isExperiencePage = Astro.url.pathname === "/experience";
-const isPublicationsPage = Astro.url.pathname === "/publications";
-const isRecognitionsPage = Astro.url.pathname === "/recognitions";
-const isContactPage = Astro.url.pathname === "/contact";
+const isExperiencePage = Astro.url.pathname === `${baseUrl}/experience`;
+const isPublicationsPage = Astro.url.pathname === `${baseUrl}/publications`;
+const isRecognitionsPage = Astro.url.pathname === `${baseUrl}/recognitions`;
+const isContactPage = Astro.url.pathname === `${baseUrl}/contact`;
 
+console.log(isHomePage, Astro.url.pathname);
 title: "Rocío Marivel Díaz Zavala";
 date: "2023-11-05";
 author: "Rocío Marivel Díaz Zavala";
-// export const prerender = false;
 ---
 
 <header class="sticky z-20 mt-3">
@@ -59,32 +59,32 @@ author: "Rocío Marivel Díaz Zavala";
       >
         <nav id="my-menu">
           <ul
-            class="flex-col gap-x-1 lg:flex-row flex md:mt-0 md:text-base md:font-normal"
+            class="flex flex-col gap-x-1 lg:flex-row md:mt-0 md:text-base md:font-normal"
           >
-            <li class="flex">
+            <li class="flex text-center">
               <a
                 class:list={[
-                  "py-2 px-6",
+                  "py-2 px-4",
                   {
                     "link-active": isHomePage,
                   },
                 ]}
-                href={baseUrl}>Inicio</a
+                href=`${baseUrl}/`>Inicio</a
               >
             </li>
-            <li class="flex">
+            <li class="flex text-center">
               <a
-                class:list={["py-2 px-6", { "link-active": isAboutPage }]}
+                class:list={["py-2 px-4", { "link-active": isAboutPage }]}
                 href=`${baseUrl}/about`>Acerca</a
               >
             </li>
-            <li class="flex">
+            <li class="flex text-center">
               <a
                 class:list={["py-2 px-6", { "link-active": isExperiencePage }]}
                 href=`${site+baseUrl}/experience`>Experiencia</a
               >
             </li>
-            <li class="flex">
+            <li class="flex text-center">
               <a
                 class:list={[
                   "py-2 px-6",
@@ -94,7 +94,7 @@ author: "Rocío Marivel Díaz Zavala";
               >
             </li>
 
-            <li class="flex">
+            <li class="flex text-center">
               <a
                 class:list={[
                   "py-2 px-6",
@@ -103,7 +103,7 @@ author: "Rocío Marivel Díaz Zavala";
                 href=`${baseUrl}/recognitions`>Reconocimientos</a
               >
             </li>
-            <li class="flex">
+            <li class="flex text-center">
               <a
                 class:list={["py-2 px-6", { "link-active": isContactPage }]}
                 href=`${baseUrl}/contact`>Contacto</a
@@ -121,6 +121,9 @@ author: "Rocío Marivel Díaz Zavala";
 ></script>
 
 <style>
+  li {
+    min-width: 120px;
+  }
   a {
     width: 100%;
     color: #525252;
