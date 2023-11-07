@@ -1,7 +1,5 @@
 ---
 const baseUrl = import.meta.env.BASE_URL;
-const site = import.meta.env.SITE;
-
 const isHomePage = Astro.url.pathname === `${baseUrl}/`;
 const isAboutPage = Astro.url.pathname === `${baseUrl}/about`;
 const isExperiencePage = Astro.url.pathname === `${baseUrl}/experience`;
@@ -9,7 +7,6 @@ const isPublicationsPage = Astro.url.pathname === `${baseUrl}/publications`;
 const isRecognitionsPage = Astro.url.pathname === `${baseUrl}/recognitions`;
 const isContactPage = Astro.url.pathname === `${baseUrl}/contact`;
 
-console.log(isHomePage, Astro.url.pathname);
 title: "Rocío Marivel Díaz Zavala";
 date: "2023-11-05";
 author: "Rocío Marivel Díaz Zavala";
@@ -57,20 +54,12 @@ author: "Rocío Marivel Díaz Zavala";
         class="hidden lg:block w-full lg:w-auto bg-gray-100 lg:bg-transparent"
         id="mobile-menu"
       >
-        <nav id="my-menu">
+        <nav id="my-menu" class="menu">
           <ul
             class="flex flex-col gap-x-1 lg:flex-row md:mt-0 md:text-base md:font-normal"
           >
             <li class="flex text-center">
-              <a
-                class:list={[
-                  "py-2 px-4",
-                  {
-                    "link-active": isHomePage,
-                  },
-                ]}
-                href=`${baseUrl}/`>Inicio</a
-              >
+              <a class:list={["py-2 px-4"]} href=`${baseUrl}/`>Inicio</a>
             </li>
             <li class="flex text-center">
               <a
@@ -81,7 +70,7 @@ author: "Rocío Marivel Díaz Zavala";
             <li class="flex text-center">
               <a
                 class:list={["py-2 px-6", { "link-active": isExperiencePage }]}
-                href=`${site+baseUrl}/experience`>Experiencia</a
+                href=`${baseUrl}/experience`>Experiencia</a
               >
             </li>
             <li class="flex text-center">
@@ -104,9 +93,8 @@ author: "Rocío Marivel Díaz Zavala";
               >
             </li>
             <li class="flex text-center">
-              <a
-                class:list={["py-2 px-6", { "link-active": isContactPage }]}
-                href=`${baseUrl}/contact`>Contacto</a
+              <a class:list={["py-2 px-6"]} href=`${baseUrl}/contact`
+                >Contacto</a
               >
             </li>
           </ul>
@@ -119,7 +107,6 @@ author: "Rocío Marivel Díaz Zavala";
 <script
   src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"
 ></script>
-
 <style>
   li {
     min-width: 120px;

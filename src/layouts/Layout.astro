@@ -17,7 +17,7 @@ const baseUrl = import.meta.env.BASE_URL;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/RocioDiazZavala/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <!-- Bootstrap Icons -->
@@ -29,8 +29,6 @@ const baseUrl = import.meta.env.BASE_URL;
     <ViewTransitions />
   </head>
   <body>
-    <script src="../scripts/aos.js"></script>
-
     <div class="layout">
       <header class="header">
         <Menu />
@@ -57,6 +55,8 @@ const baseUrl = import.meta.env.BASE_URL;
       </footer>
     </div>
     <div class="trail hidden"></div>
+    <!-- Scripts -->
+    <script src="../scripts/main.js"></script>
     <script>
       document.addEventListener("mousemove", function (event) {
         const trail = document.createElement("div");
@@ -72,6 +72,9 @@ const baseUrl = import.meta.env.BASE_URL;
 
     <style is:global>
       :root {
+      }
+      .activo {
+        font-weight: 900;
       }
 
       html {
@@ -171,6 +174,17 @@ const baseUrl = import.meta.env.BASE_URL;
           transform: scale(0);
           opacity: 0;
         }
+      }
+
+      .link-active {
+        color: #fff;
+        background: rgb(51, 0, 208);
+        background: linear-gradient(
+          90deg,
+          rgba(51, 0, 208, 1) 0%,
+          rgba(105, 16, 208, 1) 50%,
+          rgba(188, 12, 240, 1) 100%
+        );
       }
     </style>
   </body>
