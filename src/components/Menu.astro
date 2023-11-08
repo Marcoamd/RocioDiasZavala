@@ -121,7 +121,7 @@ author: "Rocío Marivel Díaz Zavala";
     enlacesMenu.forEach(function (enlace) {
         console.log('paginaActual: ', paginaActual);
         console.log('enlace.href: ', enlace.href);
-      if (paginaActual === enlace.href) {
+      if (paginaActual === enlace.href + "/") {
         enlace.classList.add("link-active");
       } else {
         enlace.classList.remove("link-active"); // Remueve la clase "activo" de otros enlaces
