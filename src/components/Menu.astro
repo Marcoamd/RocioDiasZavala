@@ -120,7 +120,8 @@ author: "Rocío Marivel Díaz Zavala";
     var enlacesMenu = document.querySelectorAll("#my-menu ul li a");
     enlacesMenu.forEach(function (enlace) {
         console.log('paginaActual: ', paginaActual);
-        console.log('enlace.href: ', enlace.href);
+        console.log('enlace.href + "/": ', enlace.href + "/");
+        console.log('enlace: ', enlace);
       if (paginaActual === enlace.href + "/") {
         enlace.classList.add("link-active");
       } else {
@@ -131,6 +132,7 @@ author: "Rocío Marivel Díaz Zavala";
   var enlacesMenu = document.querySelectorAll("#my-menu ul li a");
   enlacesMenu.forEach(function (enlace) {
     enlace.addEventListener("click", function () {
+        console.log('enlace2: ', enlace);
       // Llama a la función para establecer la clase "activo" después de hacer clic
       activarEnlaceSeleccionado();
     });
