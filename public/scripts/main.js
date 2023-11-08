@@ -22,16 +22,13 @@ function activarEnlaceSeleccionado() {
   });
 }
 
-// Escucha eventos de clic en los enlaces
-// var enlacesMenu = document.querySelectorAll("#my-menu ul li a");
-// console.log("enlacesMenu", enlacesMenu);
-// enlacesMenu.forEach(function (enlace) {
-//   enlace.addEventListener("click", function () {
-//     console.log("click");
-//     // Llama a la función para establecer la clase "activo" después de hacer clic
-//     activarEnlaceSeleccionado();
-//   });
-// });
+var enlacesMenu = document.querySelectorAll("#my-menu ul li a");
+enlacesMenu.forEach(function (enlace) {
+  enlace.addEventListener("click", function () {
+    // Llama a la función para establecer la clase "activo" después de hacer clic
+    activarEnlaceSeleccionado();
+  });
+});
 
 // var menuHome = document.getElementById("home");
 // menuHome.addEventListener("click", function () {

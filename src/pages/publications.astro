@@ -150,6 +150,12 @@ author: "Rocío Marivel Díaz Zavala";
       }
     });
   }
-
+  var enlacesMenu = document.querySelectorAll("#my-menu ul li a");
+  enlacesMenu.forEach(function (enlace) {
+    enlace.addEventListener("click", function () {
+      // Llama a la función para establecer la clase "activo" después de hacer clic
+      activarEnlaceSeleccionado();
+    });
+  });
   activarEnlaceSeleccionado();
 </script>
