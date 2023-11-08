@@ -1,6 +1,8 @@
 ---
 import Timeline from "../components/Timeline.astro";
 import Layout from "../layouts/Layout.astro";
+import { AstroScript } from "astro-script";
+const baseUrl = import.meta.env.BASE_URL;
 title: "Experiencia";
 date: "2023-11-05";
 author: "Rocío Marivel Díaz Zavala";
@@ -20,5 +22,4 @@ author: "Rocío Marivel Díaz Zavala";
     <Timeline />
   </section>
 </Layout>
-
-<style></style>
+<AstroScript src={baseUrl+"/scripts/main.js"} />

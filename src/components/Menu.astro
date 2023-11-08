@@ -1,4 +1,5 @@
 ---
+import { AstroScript } from "astro-script";
 const baseUrl = import.meta.env.BASE_URL;
 const isHomePage = Astro.url.pathname === `${baseUrl}/`;
 const isAboutPage = Astro.url.pathname === `${baseUrl}/about`;
@@ -59,46 +60,36 @@ author: "Rocío Marivel Díaz Zavala";
             class="flex flex-col gap-x-1 lg:flex-row md:mt-0 md:text-base md:font-normal"
           >
             <li class="flex text-center">
-              <a
-                class:list={["py-2 px-4", { "link-active": isHomePage }]}
-                href=`${baseUrl}/`>Inicio</a
+              <a id="home" class:list={["py-2 px-4"]} href=`${baseUrl}/`
+                >Inicio</a
+              >
+            </li>
+            <li class="flex text-center">
+              <a id="about" class:list={["py-2 px-4"]} href=`${baseUrl}/about`
+                >Acerca</a
               >
             </li>
             <li class="flex text-center">
               <a
-                class:list={["py-2 px-4", { "link-active": isAboutPage }]}
-                href=`${baseUrl}/about`>Acerca</a
-              >
-            </li>
-            <li class="flex text-center">
-              <a
-                class:list={["py-2 px-6", { "link-active": isExperiencePage }]}
+                id="experience"
+                class:list={["py-2 px-6"]}
                 href=`${baseUrl}/experience`>Experiencia</a
               >
             </li>
             <li class="flex text-center">
-              <a
-                class:list={[
-                  "py-2 px-6",
-                  { "link-active": isPublicationsPage },
-                ]}
-                href=`${baseUrl}/publications`>Publicaciones</a
+              <a class:list={["py-2 px-6"]} href=`${baseUrl}/publications`
+                >Publicaciones</a
               >
             </li>
 
             <li class="flex text-center">
-              <a
-                class:list={[
-                  "py-2 px-6",
-                  { "link-active": isRecognitionsPage },
-                ]}
-                href=`${baseUrl}/recognitions`>Reconocimientos</a
+              <a class:list={["py-2 px-6"]} href=`${baseUrl}/recognitions`
+                >Reconocimientos</a
               >
             </li>
             <li class="flex text-center">
-              <a
-                class:list={["py-2 px-6", { "link-active": isContactPage }]}
-                href=`${baseUrl}/contact`>Contacto</a
+              <a class:list={["py-2 px-6"]} href=`${baseUrl}/contact`
+                >Contacto</a
               >
             </li>
           </ul>
@@ -111,6 +102,8 @@ author: "Rocío Marivel Díaz Zavala";
 <script
   src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"
 ></script>
+<AstroScript src={baseUrl+"/scripts/main.js"} />
+
 <style>
   li {
     min-width: 120px;
@@ -142,3 +135,46 @@ author: "Rocío Marivel Díaz Zavala";
     );
   }
 </style>
+<script transition:persist>
+  function activarEnlaceSeleccionado() {
+    var paginaActual = window.location.href;
+
+    var enlacesMenu = document.querySelectorAll("#my-menu ul li a");
+    enlacesMenu.forEach(function (enlace) {
+      console.log("Pagina actual", paginaActual);
+      console.log("enlace.href", enlace.href);
+
+      if (paginaActual === enlace.href) {
+        console.log("enlace.href 2", enlace.href);
+        enlace.classList.add("link-active");
+      } else {
+        enlace.classList.remove("link-active"); // Remueve la clase "activo" de otros enlaces
+      }
+    });
+  }
+
+  var enlacesMenu = document.querySelectorAll("#my-menu ul li a");
+  console.log("enlacesMenu", enlacesMenu);
+  enlacesMenu.forEach(function (enlace) {
+    enlace.addEventListener("click", function () {
+      console.log("click");
+      // Llama a la función para establecer la clase "activo" después de hacer clic
+      activarEnlaceSeleccionado();
+    });
+  });
+
+  // var menuHome = document.getElementById("home");
+  // menuHome.addEventListener("click", function () {
+  //   console.log("menuHome", menuHome);
+  //   activarEnlaceSeleccionado();
+  // });
+
+  // var menuAbout = document.getElementById("about");
+  // menuAbout.addEventListener("click", function () {
+  //   console.log("menuAbout", menuAbout);
+  //   activarEnlaceSeleccionado();
+  // });
+
+  // Llama a la función para establecer la clase "activo" cuando se carga la página
+  activarEnlaceSeleccionado();
+</script>

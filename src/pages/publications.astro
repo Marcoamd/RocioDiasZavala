@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Publication from "../components/Publication.astro";
+import { AstroScript } from "astro-script";
+const baseUrl = import.meta.env.BASE_URL;
 title: "Publicaciones";
 date: "2023-11-05";
 author: "Rocío Marivel Díaz Zavala";
@@ -124,3 +126,4 @@ author: "Rocío Marivel Díaz Zavala";
     margin-bottom: 1rem;
   }
 </style>
+<AstroScript src={baseUrl+"/scripts/main.js"} />
