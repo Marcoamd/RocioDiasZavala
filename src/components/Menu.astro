@@ -120,9 +120,9 @@ author: "Rocío Marivel Díaz Zavala";
     var enlacesMenu = document.querySelectorAll("#my-menu ul li a");
     enlacesMenu.forEach(function (enlace) {
         console.log('paginaActual: ', paginaActual);
-        console.log('enlace.href + "/": ', enlace.href + "/");
+        console.log('enlace.href: ', enlace.href);
         console.log('enlace: ', enlace);
-      if (paginaActual === enlace.href + "/") {
+      if (paginaActual === enlace.href) {
         enlace.classList.add("link-active");
       } else {
         enlace.classList.remove("link-active"); // Remueve la clase "activo" de otros enlaces
