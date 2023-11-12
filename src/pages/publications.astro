@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Publication from "../components/Publication.astro";
-import { AstroScript } from "astro-script";
+// import { AstroScript } from "astro-script";
 const baseUrl = import.meta.env.BASE_URL;
 title: "Publicaciones";
 date: "2023-11-05";
@@ -10,14 +10,13 @@ author: "Rocío Marivel Díaz Zavala";
 
 <Layout title="Rocío Marivel Díaz Zavala">
   <!-- Title -->
-  <div class="flex items-center my-8">
+  <!-- <div class="flex items-center my-8">
     <h1 class="text-3xl tracking-widest font-extrabold text-dark-grey-900">
       PUBLICACIONES
     </h1>
     <div class="h-0.5 w-full ml-8 bg-purple-300"></div>
-  </div>
+  </div> -->
   <!-- /Title -->
-
   <!-- <div class="grid-cards">
     <Publication
       date="2023"
@@ -119,8 +118,13 @@ author: "Rocío Marivel Díaz Zavala";
     />
   </div> -->
 
+  <div class="flex items-center my-8">
+    <h1 class="text-3xl tracking-widest font-extrabold text-dark-grey-900">
+      ARTÍCULOS
+    </h1>
+    <div class="h-0.5 w-full ml-8 bg-purple-300"></div>
+  </div>
   <div class="grid-cards">
-    <!-- 1 ARTÍCULOS SCOPUS -->
     <!-- 1.1 -->
     <Publication
       date="2023"
@@ -231,52 +235,6 @@ author: "Rocío Marivel Díaz Zavala";
       ]}
       link="https://doi.org/10.37467/revtechno.v13.4986"
     />
-    <!-- 2.8 -->
-    <Publication
-      date="2023"
-      type="Libro"
-      subtitle=""
-      description={[
-        "DIDÁCTICA DE LA LENGUA Y LITERATURA REFLEXIONES PARA ENSEÑAR EN LA UNIVERSIDAD",
-        "ISBN 9789942-600-56-1",
-        "RESOLUCIÓN N° 2354-2023/DDA-INDECOPI",
-      ]}
-      link="https://dialnet.unirioja.es/servlet/libro?codigo=942106"
-    />
-    <!-- 3 PARTICIPACIÓN EN CONGRESOS -->
-    <!-- 3.1 -->
-    <Publication
-      date="2023"
-      type="Conferencia Magistral"
-      subtitle="CONTE"
-      description={[
-        "VALORACIÓN DEL ALUMNADO Y EL PROFESORADO SOBRE LA CLASE INVERTIDA EN ESTUDIOS SUPERIORES",
-      ]}
-      link=""
-    />
-
-    <!-- 3.4 -->
-    <Publication
-      date="2023"
-      type="Ponencia virtual"
-      subtitle=""
-      description={[
-        "CONGRESO CICLIP PONENCIA VIRTUAL: LECTURA EMERGENTE Y TEXTOS DISCONTINUOS DESDE EL ACOMPAÑAMIENTO LECTOR",
-      ]}
-      link="https://ciclip.com/ponencias-2023-evento/"
-    />
-    <!-- 3.5 -->
-    <Publication
-      date="2023"
-      type="Paper"
-      subtitle=""
-      description={[
-        "TECHNOPEDAGOGICAL DEVICES IN BLENDED LEARNING IN DEVELOPING COUNTRIES",
-        "Eur. Chem. Bull. 2023, 12(Special Issue 1), 1500-1507",
-      ]}
-      link="https://www.eurchembull.com/uploads/paper/6ba7047dab5fd94031712f08c4a9e525"
-    />
-
     <!-- 1.10 -->
     <Publication
       date="2022"
@@ -310,8 +268,27 @@ author: "Rocío Marivel Díaz Zavala";
       ]}
       link="https://revistas.unsa.edu.pe/index.php/rae"
     />
+  </div>
 
-    <!-- 2 CAPÍTULOS DE LIBROS Y LIBROS -->
+  <div class="flex items-center my-8">
+    <h1 class="text-3xl tracking-widest font-extrabold text-dark-grey-900">
+      CAPÍTULOS DE LIBROS Y LIBROS
+    </h1>
+    <div class="h-0.5 w-full ml-8 bg-purple-300"></div>
+  </div>
+  <div class="grid-cards">
+    <!-- 2.8 -->
+    <Publication
+      date="2023"
+      type="Libro"
+      subtitle=""
+      description={[
+        "DIDÁCTICA DE LA LENGUA Y LITERATURA REFLEXIONES PARA ENSEÑAR EN LA UNIVERSIDAD",
+        "ISBN 9789942-600-56-1",
+        "RESOLUCIÓN N° 2354-2023/DDA-INDECOPI",
+      ]}
+      link="https://dialnet.unirioja.es/servlet/libro?codigo=942106"
+    />
     <!-- 2.1 -->
     <Publication
       date="2022"
@@ -325,7 +302,6 @@ author: "Rocío Marivel Díaz Zavala";
       ]}
       link=""
     />
-
     <!-- 2.9 -->
     <Publication
       date="2022"
@@ -338,7 +314,6 @@ author: "Rocío Marivel Díaz Zavala";
       ]}
       link="http://isbn.bnp.gob.pe/catalogo.php?mode=detalle&nt=127560"
     />
-
     <!-- 2.7 -->
     <Publication
       date="2022"
@@ -350,30 +325,6 @@ author: "Rocío Marivel Díaz Zavala";
       ]}
       link="https://www.researchgate.net/publication/367126165"
     />
-
-    <!-- 3.2 -->
-    <Publication
-      date="2022"
-      type="Exposición"
-      subtitle="Grupo Comunicar Ediciones"
-      description={[
-        "EXPOSICIÓN EN CONGRESO ALFAMED 2022 PRESENCIAL: INFLUENCIA DEL «CYBERBULLYING» EN LA INTELIGENCIA EMOCIONAL DE LOS ESTUDIANTES DE ANTONIO JOSÉ DE SUCRE YANAHUARA",
-        "Redes sociales y ciudadanía · Grupo Comunicar Ediciones ",
-      ]}
-      link="https://doi.org/10.3916/Alfamed2022"
-    />
-    <!-- 3.3 -->
-    <Publication
-      date="2022"
-      type="Exposición"
-      subtitle="Grupo Comunicar Ediciones"
-      description={[
-        "EXPOSICIÓN EN CONGRESO ALFAMED 2022 PRESENCIAL: USO DE LAS REDES SOCIALES Y SU RELACIÓN  CON LAS HABILIDADES SOCIALES EN ESTUDIANTES DE UNA INSTITUCIÓN EDUCATIVA",
-        "Redes sociales y ciudadanía · Grupo Comunicar Ediciones",
-      ]}
-      link="https://doi.org/10.3916/Alfamed2022"
-    />
-
     <!-- 2.5 -->
     <Publication
       date="2021"
@@ -430,6 +381,68 @@ author: "Rocío Marivel Díaz Zavala";
         "ESTRATEGIA DE LA MESA DE DESARROLLO Y LA OPTIMIZACIÓN DE LA RESPONSABILIDAD SOCIAL EMPRESARIAL EN EL PROYECTO MINERO DE ANTAPACCAY",
       ]}
       link="https://libros.ciencialatina.org"
+    />
+  </div>
+
+  <div class="flex items-center my-8">
+    <h1 class="text-3xl tracking-widest font-extrabold text-dark-grey-900">
+      CONGRESOS
+    </h1>
+    <div class="h-0.5 w-full ml-8 bg-purple-300"></div>
+  </div>
+  <div class="grid-cards">
+    <!-- 3.1 -->
+    <Publication
+      date="2023"
+      type="Conferencia Magistral"
+      subtitle="CONTE"
+      description={[
+        "VALORACIÓN DEL ALUMNADO Y EL PROFESORADO SOBRE LA CLASE INVERTIDA EN ESTUDIOS SUPERIORES",
+      ]}
+      link=""
+    />
+    <!-- 3.4 -->
+    <Publication
+      date="2023"
+      type="Ponencia virtual"
+      subtitle=""
+      description={[
+        "CONGRESO CICLIP PONENCIA VIRTUAL: LECTURA EMERGENTE Y TEXTOS DISCONTINUOS DESDE EL ACOMPAÑAMIENTO LECTOR",
+      ]}
+      link="https://ciclip.com/ponencias-2023-evento/"
+    />
+    <!-- 3.5 -->
+    <Publication
+      date="2023"
+      type="Paper"
+      subtitle=""
+      description={[
+        "TECHNOPEDAGOGICAL DEVICES IN BLENDED LEARNING IN DEVELOPING COUNTRIES",
+        "Eur. Chem. Bull. 2023, 12(Special Issue 1), 1500-1507",
+      ]}
+      link="https://www.eurchembull.com/uploads/paper/6ba7047dab5fd94031712f08c4a9e525"
+    />
+    <!-- 3.2 -->
+    <Publication
+      date="2022"
+      type="Exposición"
+      subtitle="Grupo Comunicar Ediciones"
+      description={[
+        "EXPOSICIÓN EN CONGRESO ALFAMED 2022 PRESENCIAL: INFLUENCIA DEL «CYBERBULLYING» EN LA INTELIGENCIA EMOCIONAL DE LOS ESTUDIANTES DE ANTONIO JOSÉ DE SUCRE YANAHUARA",
+        "Redes sociales y ciudadanía · Grupo Comunicar Ediciones ",
+      ]}
+      link="https://doi.org/10.3916/Alfamed2022"
+    />
+    <!-- 3.3 -->
+    <Publication
+      date="2022"
+      type="Exposición"
+      subtitle="Grupo Comunicar Ediciones"
+      description={[
+        "EXPOSICIÓN EN CONGRESO ALFAMED 2022 PRESENCIAL: USO DE LAS REDES SOCIALES Y SU RELACIÓN  CON LAS HABILIDADES SOCIALES EN ESTUDIANTES DE UNA INSTITUCIÓN EDUCATIVA",
+        "Redes sociales y ciudadanía · Grupo Comunicar Ediciones",
+      ]}
+      link="https://doi.org/10.3916/Alfamed2022"
     />
   </div>
 </Layout>
