@@ -1,12 +1,12 @@
 ---
 // import { AstroScript } from "astro-script";
 const baseUrl = import.meta.env.BASE_URL;
-const isHomePage = Astro.url.pathname === `${baseUrl}/`;
-const isAboutPage = Astro.url.pathname === `${baseUrl}/about`;
-const isExperiencePage = Astro.url.pathname === `${baseUrl}/experience`;
-const isPublicationsPage = Astro.url.pathname === `${baseUrl}/publications`;
-const isRecognitionsPage = Astro.url.pathname === `${baseUrl}/recognitions`;
-const isContactPage = Astro.url.pathname === `${baseUrl}/contact`;
+const isHomePage = Astro.url.pathname === ``;
+const isAboutPage = Astro.url.pathname === `about`;
+const isExperiencePage = Astro.url.pathname === `experience`;
+const isPublicationsPage = Astro.url.pathname === `publications`;
+const isRecognitionsPage = Astro.url.pathname === `recognitions`;
+const isContactPage = Astro.url.pathname === `contact`;
 
 title: "Rocío Marivel Díaz Zavala";
 date: "2023-11-05";
@@ -60,12 +60,12 @@ author: "Rocío Marivel Díaz Zavala";
             class="flex flex-col gap-x-1 lg:flex-row md:mt-0 md:text-base md:font-normal"
           >
             <li class="flex text-center">
-              <a id="home" class:list={["py-2 px-4"]} href=`${baseUrl}/`
+              <a id="home" class:list={["py-2 px-4"]} href=``
                 >Inicio</a
               >
             </li>
             <li class="flex text-center">
-              <a id="about" class:list={["py-2 px-4"]} href=`${baseUrl}/about/`
+              <a id="about" class:list={["py-2 px-4"]} href=`about/`
                 >Acerca</a
               >
             </li>
@@ -73,22 +73,22 @@ author: "Rocío Marivel Díaz Zavala";
               <a
                 id="experience"
                 class:list={["py-2 px-6"]}
-                href=`${baseUrl}/experience/`>Experiencia</a
+                href=`experience/`>Experiencia</a
               >
             </li>
             <li class="flex text-center">
-              <a class:list={["py-2 px-6"]} href=`${baseUrl}/publications/`
+              <a class:list={["py-2 px-6"]} href=`publications/`
                 >Publicaciones</a
               >
             </li>
 
             <li class="flex text-center">
-              <a class:list={["py-2 px-6"]} href=`${baseUrl}/recognitions/`
+              <a class:list={["py-2 px-6"]} href=`recognitions/`
                 >Reconocimientos</a
               >
             </li>
             <li class="flex text-center">
-              <a class:list={["py-2 px-6"]} href=`${baseUrl}/contact/`
+              <a class:list={["py-2 px-6"]} href=`contact/`
                 >Contacto</a
               >
             </li>
