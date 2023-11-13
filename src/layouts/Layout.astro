@@ -30,6 +30,13 @@ const url = `${siteUrl}${baseUrl}`;
     />
     <!-- /Bootstrap Icons -->
 
+    <!-- AnimateCSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- /AnimateCSS -->
+
     <ViewTransitions />
   </head>
   <body>
@@ -47,7 +54,7 @@ const url = `${siteUrl}${baseUrl}`;
           />
           <div
             class="w-full pt-5 px-5 md:px-10 overflow-y-auto contenedor"
-            transition:animate="fade"
+            transition:animate="slide"
           >
             <slot />
           </div>

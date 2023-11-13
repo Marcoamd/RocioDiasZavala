@@ -9,31 +9,36 @@ author: "Rocío Marivel Díaz Zavala";
 
 <Layout title="Rocío Marivel Díaz Zavala">
   <section class="flex items-center h-full">
-    <article class="px-5 sm:px-10">
-      <h1 class="text-5xl font-extrabold text-dark-grey-900">
+    <article class="sm:px-10">
+      <h1 class="md:hidden text-5xl font-extrabold text-dark-grey-900">
+        Rocío Marivel Díaz Zavala
+      </h1>
+      <h1
+        class="hidden md:block text-5xl font-extrabold text-dark-grey-900 typing"
+      >
         Rocío Marivel Díaz Zavala
       </h1>
       <div class="line w-32 h-1 my-3"></div>
-      <p class="text-3xl hidden md:block text-dark-grey-600">
-        Licenciada en Ciencias de la Educación
-      </p>
-      <span class="text-3xl md:hidden text-dark-grey-600">
-        Licenciada en Ciencias de la Educación
-      </span>
+      <div
+        class="text-neutral-600 sm:text-lg animate__animated animate__fadeInUp"
+      >
+        <p>Licenciada: Ciencias de la Educación.</p>
+        <p>Maestro: Investigación y Docencia en Educación Superior.</p>
+        <p>Doctor: Administración.</p>
+        <p>Especialidades: Lengua, Literatura y Filosofía.</p>
+      </div>
     </article>
   </section>
 </Layout>
 
 <style>
-  p {
-    /* display: block; */
-    font-family: monospace;
+  .typing {
     white-space: nowrap;
-    border-right: 4px solid;
-    width: 39ch;
+    border-right: 4px solid #2c2c2c;
+    width: 22ch;
 
     animation:
-      typing 2s steps(39),
+      typing 2s steps(22),
       blink 0.5s infinite step-end alternate;
     overflow: hidden;
   }
