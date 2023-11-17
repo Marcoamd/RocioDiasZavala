@@ -1,8 +1,11 @@
 <div class="flex justify-between py-4 px-10 lg:px-0 bg-white">
   <div class="hidden sm:block">
-    <span class="text-sm text-neutral-700"
-      >Todos los derechos reservados © 2023.</span
-    >
+    <span class="text-sm text-neutral-700">
+      Todos los derechos reservados ©
+        <span id="copyrightYear">
+          <script>document.getElementById('copyrightYear').appendChild(document.createTextNode(new Date().getFullYear().toString()))</script>
+        </span>.
+      </span>
   </div>
   <div class="flex gap-x-5 justify-center w-full sm:w-auto">
     <a
